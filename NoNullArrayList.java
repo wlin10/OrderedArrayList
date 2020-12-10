@@ -6,8 +6,16 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     }
   }
 
-  public void add(int index, T element)
+  public void add(int index, T element) {
+    if (element == null){
+      throw IllegalArgumentException("no null elements should be added");
+    }
+  }
 
-  public E set(int index, E element)
+  public T set(int index, T element){
+    if (element == null){
+      throw IllegalArgumentException("no null elements should be added");
+    }
+  }
 
 }
