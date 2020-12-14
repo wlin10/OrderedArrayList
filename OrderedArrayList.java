@@ -10,7 +10,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 
   private int correctIndex(T element) {
     int index = 0;
-    while (index + 1 < size() && element.compareTo(get(index + 1)) > 0) {
+    while (index < size() && element.compareTo(get(index)) > 0) {
       index++;
     }
     return index;
